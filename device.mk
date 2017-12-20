@@ -14,18 +14,18 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/lge/h930
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# inherit from common g6
--include device/lge/g6-common/BoardConfigCommon.mk
+# Get non-open-source specific aspects
+$(call inherit-product-if-exists, vendor/lge/h930/h930-vendor.mk)
 
-TARGET_OTA_ASSERT_DEVICE := v30,joan,h930
+# common g6
+$(call inherit-product, device/lge/v30-common/v30.mk)
 
-# Kernel
-TARGET_KERNEL_CONFIG := lineageos_h930_defconfig
+# Sensors
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sensors/sensor_def_joan_global_com.conf:system/etc/sensors/sensor_def_variable.conf
 
-# Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-
-# inherit from the proprietary version
--include vendor/lge/h930/BoardConfigVendor.mk
+# WiFi Calibration
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/wifi/bcmdhd.cal:system/etc/wifi/bcmdhd.cal

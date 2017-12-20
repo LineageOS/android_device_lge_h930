@@ -1,3 +1,4 @@
+#!/bin/bash
 #
 # Copyright (C) 2017 The LineageOS Project
 #
@@ -14,18 +15,11 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/lge/h930
+set -e
 
-# inherit from common g6
--include device/lge/g6-common/BoardConfigCommon.mk
+export DEVICE=us997
+export DEVICE_COMMON=g6-common
+export PLATFORM_COMMON=msm8996-common
+export VENDOR=lge
 
-TARGET_OTA_ASSERT_DEVICE := v30,joan,h930
-
-# Kernel
-TARGET_KERNEL_CONFIG := lineageos_h930_defconfig
-
-# Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-
-# inherit from the proprietary version
--include vendor/lge/h930/BoardConfigVendor.mk
+./../$PLATFORM_COMMON/setup-makefiles.sh $@

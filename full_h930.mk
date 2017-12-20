@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,18 +14,16 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/lge/h930
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# inherit from common g6
--include device/lge/g6-common/BoardConfigCommon.mk
+# Inherit from h870 device
+$(call inherit-product, device/lge/h930/device.mk)
 
-TARGET_OTA_ASSERT_DEVICE := v30,joan,h930
-
-# Kernel
-TARGET_KERNEL_CONFIG := lineageos_h930_defconfig
-
-# Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-
-# inherit from the proprietary version
--include vendor/lge/h930/BoardConfigVendor.mk
+# Set those variables here to overwrite the inherited values.
+PRODUCT_DEVICE := h930
+PRODUCT_NAME := full_h930
+PRODUCT_BRAND := lge
+PRODUCT_MODEL := LG-h930
+PRODUCT_MANUFACTURER := LGE

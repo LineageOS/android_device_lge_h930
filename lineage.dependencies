@@ -1,0 +1,6 @@
+[
+  {
+    "repository": "android_device_lge_v30-common",
+    "target_path": "device/lge/v30-common"
+  }
+]
