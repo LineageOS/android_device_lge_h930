@@ -17,7 +17,7 @@
 DEVICE_PATH := device/lge/h930
 
 # inherit from common g6
--include device/lge/g6-common/BoardConfigCommon.mk
+-include device/lge/v30-common/BoardConfigCommon.mk
 
 TARGET_OTA_ASSERT_DEVICE := v30,joan,h930
 
