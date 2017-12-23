@@ -22,7 +22,7 @@ DEVICE_PATH := device/lge/h930
 TARGET_OTA_ASSERT_DEVICE := v30,joan,h930
 
 # Kernel
-TARGET_KERNEL_CONFIG := lineageos_h930_defconfig
+TARGET_KERNEL_CONFIG := joan_global_com-perf_defconfig
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
