@@ -19,7 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/lge/h930/h930-vendor.mk)
 
-# common g6
+# common v30
 $(call inherit-product, device/lge/v30-common/v30.mk)
 
 # Sensors
@@ -27,5 +27,5 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/sensor_def_joan_global_com.conf:system/etc/sensors/sensor_def_variable.conf
 
 # WiFi Calibration
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/wifi/bcmdhd.cal:system/etc/wifi/bcmdhd.cal
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/configs/wifi/bcmdhd.cal:system/etc/wifi/bcmdhd.cal
