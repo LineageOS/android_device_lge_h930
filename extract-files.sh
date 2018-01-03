@@ -17,9 +17,8 @@
 
 set -e
 
-export DEVICE=h870
-export DEVICE_COMMON=g6-common
-export PLATFORM_COMMON=msm8996-common
+export DEVICE=h930
+export DEVICE_COMMON=v30-common
 export VENDOR=lge
 
-./../$PLATFORM_COMMON/extract-files.sh $@
+./../$DEVICE_COMMON/extract-files.sh $@
