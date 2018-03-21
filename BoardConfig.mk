@@ -28,4 +28,4 @@ TARGET_KERNEL_CONFIG := lineage_h930_defconfig
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # inherit from the proprietary version
--include vendor/lge/h930/BoardConfigVendor.mk
+#-include vendor/lge/h930/BoardConfigVendor.mk
