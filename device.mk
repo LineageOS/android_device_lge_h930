@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,15 +17,11 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Get non-open-source specific aspects
-#$(call inherit-product-if-exists, vendor/lge/h930/h930-vendor.mk)
+$(call inherit-product-if-exists, vendor/lge/h930/h930-vendor.mk)
 
 # common v30
-$(call inherit-product, device/lge/v30-common/v30.mk)
+$(call inherit-product, device/lge/joan-common/joan.mk)
 
 # Sensors
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sensors/sensor_def_joan_global_com.conf:system/etc/sensors/sensor_def_variable.conf
-
-# WiFi Calibration
-#PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/configs/wifi/bcmdhd.cal:system/etc/wifi/bcmdhd.cal
+    $(LOCAL_PATH)/configs/sensors/sensor_def_joan_global_com.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_variable.conf

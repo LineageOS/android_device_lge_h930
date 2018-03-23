@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,15 +17,12 @@
 DEVICE_PATH := device/lge/h930
 
 # inherit from common v30
--include device/lge/v30-common/BoardConfigCommon.mk
+-include device/lge/joan-common/BoardConfigCommon.mk
 
 TARGET_OTA_ASSERT_DEVICE := v30,joan,h930
 
 # Kernel
 TARGET_KERNEL_CONFIG := lineage_h930_defconfig
 
-# Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-
 # inherit from the proprietary version
-#-include vendor/lge/h930/BoardConfigVendor.mk
+-include vendor/lge/h930/BoardConfigVendor.mk

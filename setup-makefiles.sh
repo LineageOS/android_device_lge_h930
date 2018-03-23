@@ -18,8 +18,7 @@
 set -e
 
 export DEVICE=h930
-export DEVICE_COMMON=v30-common
-export PLATFORM_COMMON=msm8998-common
+export DEVICE_COMMON=joan-common
 export VENDOR=lge
 
-./../$PLATFORM_COMMON/setup-makefiles.sh $@
+./../$DEVICE_COMMON/setup-makefiles.sh $@
