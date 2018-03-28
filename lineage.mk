@@ -9,6 +9,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_NAME := lineage_h930
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_DEVICE="joan" \
     PRODUCT_DEVICE="joan" \
     PRODUCT_NAME="joan_global_com" \
     BUILD_FINGERPRINT="lge/joan_global_com/joan:7.1.2/N2G47H/172860011c463:user/release-keys" \
