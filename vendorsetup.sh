@@ -1,1 +1,1 @@
-add_lunch_combo lineage_h930-userdebug
+add_lunch_combo aosp_h930-userdebug
