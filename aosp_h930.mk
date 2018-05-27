@@ -7,6 +7,7 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 TARGET_GAPPS_ARCH := arm64
+TARGET_BOOT_ANIMATION_RES := 1440 
 
 PRODUCT_NAME := aosp_h930
 
