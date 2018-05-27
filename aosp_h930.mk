@@ -6,6 +6,8 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 # Overlays (inherit after vendor/cm to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+TARGET_GAPPS_ARCH := arm64
+
 PRODUCT_NAME := aosp_h930
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
