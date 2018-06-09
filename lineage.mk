@@ -15,3 +15,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="joan_global_com-user 8.0.0 OPR1.170623.026 180851011dea3 release-keys"
 
 BUILD_FINGERPRINT="lge/joan_global_com/joan:8.0.0/OPR1.170623.026/180851011dea3:user/release-keys"
+
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST += ro.product.model ro.vendor.product.model
